@@ -10,7 +10,7 @@ def main():
     parser.add_argument('--sort', help="Sort by years behind, in descending order", action='store_true')
     args = parser.parse_args()
     requirements = set()
-    requirements_files = get_requirement_files(args.r)
+    requirements_files = list(get_requirement_files(args.r))
 
     if requirements_files.size() != 0:
 
