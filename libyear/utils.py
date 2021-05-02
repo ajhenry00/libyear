@@ -1,5 +1,6 @@
 import os
 import re
+import errno
 
 REQUIREMENT_NAME_RE = r'^([^=><]+)'
 REQUIREMENT_VERSION_LT_RE = r'<([^$,]*)'
@@ -67,3 +68,4 @@ def load_requirements(*requirements_paths):
             if is_requirement(line)
         )
     return list(requirements)
+        
