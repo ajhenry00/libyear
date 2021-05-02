@@ -12,7 +12,7 @@ def main():
     requirements = set()
     requirements_files = get_requirement_files(args.r)
 
-    if requirements_files != 0:
+    if requirements_files.size() != 0:
 
         for req_file in requirements_files:
             requirements.update(load_requirements(req_file))
